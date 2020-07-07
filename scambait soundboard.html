@@ -1,0 +1,60 @@
+<style>
+	
+	body {
+  color: #ffd500;
+}
+
+	select {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: #302e2e;
+  border: none;
+  border-bottom: 2px solid #ffd500;
+  color: ffd500;
+  padding: 10px;
+  padding-right: 38px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Adding transition effect */
+  transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+	
+</style>
+
+
+
+<body bgcolor="#3d3a3a" >
+	
+Voice: <select id="voiceSelect">
+  <option value="frames/indian%20man%20soundboard.html">Indian Man</option>
+  <option value="saab">Coming Soon</option>
+</select>
+	
+	<br>
+	<br>
+	
+<iframe id="effects" class="center" src=" frames/effects%20soundboard.html" height="600" width="500"></iframe>
+	
+
+<iframe id="voice" class="center" src="frames/indian%20man%20soundboard.html" height="600" width="500"></iframe>
+
+	</body>
+
+<script>
+	document.addEventListener('input', function (event) {
+
+	// Only run for #voiceSelect select
+	if (event.target.id !== 'voiceSelect') return;
+
+	if (event.target.value === 'frames/indian%20man%20soundboard.html') {
+		document.getElementById("voice").src = "frames/indian%20man%20soundboard.html"
+	}
+
+if (event.target.value === 'saab') {
+		document.getElementById("voice").src = "https://codepen.io/cferdinandi/pen/gqGbbz"
+	}
+}, false);
+</script>
+

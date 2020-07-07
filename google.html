@@ -1,0 +1,114 @@
+<html><head>
+	
+	<title>Google</title>
+	
+	<link rel="icon" href="https://www.google.com/s2/favicons?domain=www.google.com" type="image/gif" sizes="16x16">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	
+</head><body>
+    
+    <style>
+#search {
+position: absolute;
+  display: block;
+    box-sizing: border-box;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 254px;
+	margin-left: 32%;
+	background-color: transparent;
+    border: none;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    height: 34px;
+    font-size: 16px;
+	}
+	.frame {
+  margin: auto;
+  display: block;
+    box-sizing: border-box;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+	margin-left: 200px;
+	}
+
+</style>
+
+
+
+<div>
+  
+</div>
+    
+    <iframe src="frames/google%20frame%20blank.html"  style="position:absolute; top:0; left:0; width:100%; height:100%; border:0" id="frame"></iframe><input class="center-block">
+	
+	
+	<input autocomplete="off" autofocus id="search" size="57">
+
+
+	<script>
+		
+		var random
+		
+		var query = document.getElementById("search").value
+		
+		var url = query.split(' ').join('+');
+		
+	setInterval(function(){
+  
+		
+query = document.getElementById("search").value
+
+query = query.split(' ').join('+');
+		
+random = Math.floor(Math.random() * 3); 
+		
+switch(random){
+		case 0:
+		url = "https://www.bing.com/search?q=" + query + "&first=81&FORM=PERE3"
+		break;
+		
+		case 1:
+		url = "https://search.yahoo.com/search;_ylt=A2KIbNBovp9es78AiB1XNyoA;_ylu=X3oDMTEzajVvczlrBGNvbG8DYmYxBHBvcwMxBHZ0aWQDBHNlYwNwYWdpbmF0aW9u?p=" + query + "&pz=10&ei=UTF-8&fr=yfp-t&bct=0&fp=1&b=81&pz=10&bct=0&xargs=0"
+		break;
+		
+		case 2:
+		url = "http://google.com/euaihwiudhu"
+		break;
+}
+		
+}, 1);
+
+		setInterval(function(){
+  if(document.getElementById("search").value === "" === false){
+		document.getElementById("frame").src = "frames/google%20frame%20menu.html";
+		
+	}
+		
+		}, 1);
+		
+		$('#search').keydown(function(e){
+    if(e.keyCode === 13){
+			
+            var win = window.open(url, '_blank');
+  win.focus();
+			
+     }  
+});
+		
+	</script>
+
+		</body></html>
+		
+		
+</body></html>
